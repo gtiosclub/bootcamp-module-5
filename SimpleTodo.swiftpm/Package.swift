@@ -19,8 +19,8 @@ let package = Package(
             bundleIdentifier: "club.gtios.SimpleTodo",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .weights),
-            accentColor: .presetColor(.yellow),
+            appIcon: .placeholder(icon: .checkmark),
+            accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .pad,
                 .phone
@@ -36,7 +36,10 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "AppModule",
-            path: "."
+            path: ".",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
