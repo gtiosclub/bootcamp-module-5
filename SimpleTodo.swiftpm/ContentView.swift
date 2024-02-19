@@ -48,12 +48,6 @@ struct ContentView: View {
                 /* BEGIN YOUR CODE */
                 
                 /* END YOUR CODE */
-                
-                ForEach(todoLogic.items) { item in
-                    TodoItemView(item: item, deleteAction: { itemToDelete in
-                        todoLogic.delete(item: itemToDelete)
-                    })
-                }
             }
             .navigationTitle("To-do List")
             .toolbar {

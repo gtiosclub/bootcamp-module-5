@@ -16,25 +16,12 @@ struct TodoItemView: View {
     //     existing UI elements to match the guideline
     
     var body: some View {
-        /*HStack {
+        HStack {
             Text(item.description)
             Spacer()
             Button("Delete") {
                 deleteAction(item)
             }
-        }*/
-        
-        // EXAMPLE SOLUTION
-        HStack {
-            Text(item.description)
-                .fontWeight(.bold)
-            Spacer()
-            Button("Delete", systemImage: "trash") {
-                deleteAction(item)
-            }
-            .tint(.pink)
-            .foregroundStyle(.pink)
-            .buttonStyle(.bordered)
         }
         
     }

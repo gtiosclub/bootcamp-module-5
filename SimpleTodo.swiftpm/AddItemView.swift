@@ -23,7 +23,6 @@ struct AddItemView: View {
         //     AddItemView conform to the guideline image
         
         /* BEGIN YOUR CODE */
-        /*
         TextField("Item description", text: $text)
         Button(action: {
             todoLogic.add(item: text)
@@ -31,40 +30,7 @@ struct AddItemView: View {
         }, label: {
             Text("Add")
         })
-         */
         /* END YOUR CODE */
-        
-        // EXAMPLE SOLUTION
-        VStack {
-            Text("Add Item")
-                .font(.title)
-            TextField("Item description", text: $text)
-                .textFieldStyle(.roundedBorder)
-            HStack {
-                Button(action: {
-                    isVisible = false
-                }, label: {
-                    Spacer()
-                    Text("Add")
-                    Spacer()
-                })
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-                
-                Spacer()
-                
-                Button(action: {
-                    isVisible = false
-                }, label: {
-                    Spacer()
-                    Text("Cancel")
-                    Spacer()
-                })
-                .buttonStyle(.borderedProminent)
-            }
-            Spacer()
-        }
-        .padding(32)
     }
 }
 
