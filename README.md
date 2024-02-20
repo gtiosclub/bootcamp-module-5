@@ -6,8 +6,11 @@ in Swift.
 #### What you'll accomplish:
 
 [ ] Load elements of an array as items in a scrollable list
+
 [ ] Add interactivity to an app using closures
+
 [ ] Add styling to UI components using view modifiers
+
 [ ] Build structured UI layouts using Views
 
 ## Getting Started
@@ -56,6 +59,7 @@ necessary to implement the `deleteAction` of TodoItemView.
 #### What you've accomplished so far:
 
 [x] Load elements of an array as items in a scrollable list
+
 [x] Add interactivity to an app using closures
 
 ## Step 2: Styling a component
@@ -79,7 +83,9 @@ the guideline below:
 #### What you've accomplished so far:
 
 [x] Load elements of an array as items in a scrollable list
+
 [x] Add interactivity to an app using closures
+
 [x] Add styling to UI components using view modifiers
 
 ## Step 3: Building layouts
@@ -110,6 +116,9 @@ as well!
 #### What you've accomplished today:
 
 [x] Load elements of an array as items in a scrollable list
+
 [x] Add interactivity to an app using closures
+
 [x] Add styling to UI components using view modifiers
+
 [x] Build structured UI layouts using Views
