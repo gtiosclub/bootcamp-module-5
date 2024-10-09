@@ -18,12 +18,20 @@ struct TodoItemView: View {
     var body: some View {
         HStack {
             Text(item.description)
+                .fontWeight(.bold)
             Spacer()
-            Button("Delete") {
+            Button(action: {
                 deleteAction(item)
+            }) {
+                HStack {
+                    Image(systemName: "trash")
+                    Text("Delete")
+                }
             }
+            .buttonStyle(.borderedProminent)
+            .tint(.pink)
         }
-        
+        .padding()
     }
 }
 

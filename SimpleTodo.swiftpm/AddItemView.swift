@@ -10,7 +10,6 @@ import SwiftUI
 struct AddItemView: View {
     @EnvironmentObject var todoLogic: TodoViewModel
     @Binding var isVisible: Bool
-    
     @State var text: String = ""
     
     var body: some View {
@@ -23,13 +22,35 @@ struct AddItemView: View {
         //     AddItemView conform to the guideline image
         
         /* BEGIN YOUR CODE */
-        TextField("Item description", text: $text)
-        Button(action: {
-            todoLogic.add(item: text)
-            isVisible = false
-        }, label: {
-            Text("Add")
-        })
+        VStack {
+            Text("Add Item")
+                .font(.title)
+                .padding(.bottom, 8)
+
+            TextField("Item description", text: $text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.bottom, 16)
+
+            HStack {
+                Button("Add") {
+                    todoLogic.add(item: text)
+                    isVisible = false
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.green)
+                .frame(maxWidth: .infinity)
+                
+                Button("Cancel") {
+                    isVisible = false
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.blue)
+                .frame(maxWidth: .infinity)
+            }
+            .padding(.bottom, 32)
+            Spacer()
+        }
+        .padding(32)
         /* END YOUR CODE */
     }
 }

@@ -46,7 +46,11 @@ struct ContentView: View {
                 //     Hint 2: Look at the demo function for deleting an item
                 
                 /* BEGIN YOUR CODE */
-                
+                ForEach(todoLogic.items, id: \.id) { item in
+                    TodoItemView(item: item) { itemToDelete in
+                        todoLogic.delete(item: item)
+                    }
+                }
                 /* END YOUR CODE */
             }
             .navigationTitle("To-do List")
@@ -66,5 +70,12 @@ struct ContentView: View {
                 })
             }
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(TodoViewModel())
     }
 }
