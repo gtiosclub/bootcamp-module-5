@@ -64,8 +64,7 @@ necessary to implement the `deleteAction` of TodoItemView.
 
 - [x] Add interactivity to an app using closures
 
-## Step 2: Styling a component
-
+## Step 2: Styling a componentÆ
 Now that you have a working to-do list, you may notice that the list items
 look a little... boring. Let's fix that.
 

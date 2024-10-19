@@ -17,11 +17,18 @@ struct TodoItemView: View {
     
     var body: some View {
         HStack {
-            Text(item.description)
             Spacer()
-            Button("Delete") {
+            Text(item.description)
+                .bold()
+            Spacer()
+            Spacer()
+            Button("🗑️  Delete") {
                 deleteAction(item)
             }
+            .border(Color.red)
+            .foregroundStyle(.red)
+            .background(Color.pink.opacity(0.2))
+            Spacer()
         }
         
     }

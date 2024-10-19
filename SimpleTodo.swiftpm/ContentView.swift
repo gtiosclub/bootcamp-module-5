@@ -46,7 +46,10 @@ struct ContentView: View {
                 //     Hint 2: Look at the demo function for deleting an item
                 
                 /* BEGIN YOUR CODE */
-                
+                ForEach(todoLogic.items) {Item in
+                    TodoItemView(item: Item, deleteAction: { TodoItem in
+                    })
+                }
                 /* END YOUR CODE */
             }
             .navigationTitle("To-do List")
